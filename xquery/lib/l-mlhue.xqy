@@ -1,7 +1,7 @@
 xquery version "1.0-ml";
 
 (:~
-	XQuery library for controlling Phillips Hue light
+	XQuery library for controlling Philips Hue light
 	For MarkLogic 6.0 +
 	
 	@author derickson
@@ -16,9 +16,15 @@ declare variable $SETTINGS_URI := "/mlhue/hash.xml";
 declare variable $HOST := "nibenay";
 
 declare variable $key := lh:get-key();
-
-(: 1.) set the ip of your hub :)
 declare variable $ip := "10.0.1.20";
+
+declare variable $RED := lh:hsb(360,100,100);
+declare variable $MAGENTA := lh:hsb(300,100,100);
+declare variable $PURPLE := lh:hsb(278,100,100);
+declare variable $BLUE := lh:hsb(234,100,100);
+declare variable $GREEN := lh:hsb(133,100,100);
+declare variable $YELLOW := lh:hsb(61,100,100);
+declare variable $ORANGE := lh:hsb(42,100,100);
 
 
 (:~
